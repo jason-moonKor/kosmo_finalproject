@@ -87,7 +87,10 @@ body {
 	-webkit-text-size-adjust: 100%;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
+ul {
+	margin: 0;
+	padding: 0;
+}
 hr {
 	margin: 1rem 0;
 	color: inherit;
@@ -193,25 +196,6 @@ address {
 	margin-bottom: 1rem;
 	font-style: normal;
 	line-height: inherit;
-}
-
-ol,
-ul {
-	padding-left: 2rem;
-}
-
-ol,
-ul,
-dl {
-	margin-top: 0;
-	margin-bottom: 1rem;
-}
-
-ol ol,
-ul ul,
-ol ul,
-ul ol {
-	margin-bottom: 0;
 }
 
 dt {
@@ -3406,14 +3390,14 @@ fieldset:disabled .btn {
 }
 
 .btn-dark {
-	color: #fff;
+	color: whitesmoke;
 	background-color: #212529;
 	border-color: #212529;
 }
 .btn-dark:hover {
 	color: #fff;
-	background-color: #1c1f23;
-	border-color: #1a1e21;
+	background-color: #6db800;
+	border-color: #6db800;
 }
 .btn-check:focus + .btn-dark,
 .btn-dark:focus {
@@ -11764,7 +11748,7 @@ p {
 		padding-top: 1.5rem;
 		padding-bottom: 1.5rem;
 		border: none;
-		background-color: transparent;
+		background-color: #6db800;
 		transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
 	}
 	#mainNav .navbar-brand {
@@ -12200,4 +12184,107 @@ section#contact form#contactForm :-ms-input-placeholder {
 	font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
 		Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
 		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* 메인 부트스트랩 css 끝, 장바구니css 시작 */
+* {
+	text-decoration: none;
+	list-style: none;
+}
+.cart_tab {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	border: 1px #999 solid;
+}
+.cart_tab a {
+	display: block;
+	float: left;
+	width: 50%;
+	line-height: 51px;
+	text-align: center;
+	box-sizing: border-box;
+	color: #fff;
+	background: whitesmoke;
+	text-decoration: none;
+}
+#on {
+	color: #fff;
+	background: #6db800;
+}
+.cart_tab a:first {
+	color: #fff;
+	background: #6db800;
+}
+
+.cart_tab a:nth-child(2) {
+	color: #444;
+}
+.cart_section {
+	display: flex;
+	width: 100%;
+}
+.cart_left {
+	margin-right: 10px;
+}
+
+.cart_select {
+	list-style: none;
+	display: flex;
+	border: 1px #999 solid;
+	border-top: none;
+	width: 100%;
+	justify-content: space-between;
+	background-color: #f2f2f2;
+}
+
+#check_info {
+	margin-top: 7px;
+	font-size: 18px;
+	font-weight: bold;
+}
+.no_data {
+	text-align: center;
+	font-size: 15px;
+	font-weight: 400;
+	margin: 100px;
+}
+
+/* 오른쪽 총 금액 계산 */
+.cart_right {
+	margin-left: 10px;
+}
+.total_price {
+	padding: 10px;
+	border: 1px #444953 solid;
+	font-size: 17px;
+	font-weight: 400;
+	background-color: #f2f2f2;
+}
+.total_price ul {
+	display: flex;
+	justify-content: space-between;
+	padding: 15px;
+}
+
+.list_total {
+	margin-top: 10px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #333;
+	border-top: 1px #ccc solid;
+}
+
+.cart_button button {
+	width: 100%;
+	height: 4rem;
+	background-color: #6db800;
+	color: whitesmoke;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.cart_button button:hover {
+	background-color: #0f5132;
+	color: whitesmoke;
 }
