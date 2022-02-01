@@ -11739,7 +11739,7 @@ p {
 }
 #mainNav .navbar-nav .nav-item .nav-link.active,
 #mainNav .navbar-nav .nav-item .nav-link:hover {
-	color: #6db800;
+	color: #ffc800;
 	transition: 0.5s;
 }
 
@@ -11756,6 +11756,9 @@ p {
 		transition: font-size 0.3s ease-in-out;
 	}
 	#mainNav .navbar-brand img {
+		position: absolute;
+		top: 1rem;
+		left: 6rem;
 		height: 2rem;
 		transition: height 0.3s ease-in-out;
 	}
@@ -12236,6 +12239,10 @@ section#contact form#contactForm :-ms-input-placeholder {
 	width: 100%;
 	justify-content: space-between;
 	background-color: #f2f2f2;
+}
+
+.cart_select li {
+	padding: 10px 0;
 }
 
 #check_info {
