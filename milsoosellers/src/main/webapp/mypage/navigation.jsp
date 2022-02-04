@@ -4,7 +4,7 @@
 		<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
 			<div class="container">
 				<a class="navbar-brand" href="#page-top">
-					<img src="./assets/img/logos/logo.svg" />
+					<img src="../assets/img/logos/logo.svg" />
 				</a>
 				<!-- <img src="" / width="25px"> -->
 				<!-- <i id="iconn" class="fas fa-seedling"></i> -->
