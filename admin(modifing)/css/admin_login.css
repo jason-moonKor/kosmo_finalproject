@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+form {} 
+form-group {}
+.form-horizontal {padding: 70px; border-radius: 40px;
+     margin: 100px 200px; background-color:  #ffc800;}
+
+.box1 { margin-bottom: 40px;}
+img {width:100%; height: auto;}
+
+h4 {font-weight: bold; margin: 35px 0 30px;}
+
+.btn {margin-top: 20px;}
+.btn-default:hover {}
+
+input {border-radius: 50px;}
+
+
+
