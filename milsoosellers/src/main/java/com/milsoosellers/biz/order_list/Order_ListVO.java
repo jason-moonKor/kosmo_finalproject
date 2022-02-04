@@ -6,7 +6,8 @@ public class Order_ListVO {
 	private String total_price;
 	private String order_date;
 	private String address;
-	private String prod_code;
+	private String order_status;
+	
 	public String getMember_id() {
 		return member_id;
 	}
@@ -37,17 +38,17 @@ public class Order_ListVO {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public String getProd_code() {
-		return prod_code;
+	public String getOrder_status() {
+		return order_status;
 	}
-	public void setProd_code(String prod_code) {
-		this.prod_code = prod_code;
+	public void setOrder_status(String order_status) {
+		this.order_status = order_status;
 	}
 	
 	@Override
 	public String toString() {
 		return "Order_ListVO [member_id= " + member_id + ", count= " + count + ", total_price= " + total_price
-				+ ", order_date= " + order_date + ", address= " + address + ", prod_code= " + prod_code;
+				+ ", order_date= " + order_date + ", address= " + address + ", order_status= " + order_status;
 	}
 	
 	

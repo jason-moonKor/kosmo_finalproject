@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="com.milsoosellers.biz.order_list.Order_ListVO" %>
+<%@ page import="com.milsoosellers.biz.order_list.impl.Order_ListDAO" %>
+<%@ page import="java.util.List" %>
+
+
 <!DOCTYPE html>
 <html>
 	<head>
