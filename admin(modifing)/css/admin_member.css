@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+.slidebar {background-color: #ffc800; color:#ffffff;
+            height: 1200px;}
+.slidebar ul {padding : 30px 30px;}
+.slidebar ul li {list-style: none; padding: 15px 0;
+                border-bottom: 1px solid #eeeeee;}
+
+.profile {background-color:bisque; text-align: right;}
+.admin_profile {padding: 10px;}
+.img-circle {width: 5%;}
+.admin_profile span {color: #585555; margin-right: 10px;}
+
+
+.main {padding: 20px;}
+
+th {background-color: #cecdcd;}
+
+.form-control {width:13%;}
