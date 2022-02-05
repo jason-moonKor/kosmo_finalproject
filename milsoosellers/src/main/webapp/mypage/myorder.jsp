@@ -3,6 +3,7 @@
 <%@ page import="com.milsoosellers.biz.order_list.Order_ListVO" %>
 <%@ page import="com.milsoosellers.biz.order_list.impl.Order_ListDAO" %>
 <%@ page import="java.util.List" %>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
 
 
 <!DOCTYPE html>
@@ -54,7 +55,7 @@
 							<li>나의 쇼핑</li>
 							<hr>
 							<li class="nav-item">
-								<a href="./myorder.jsp" class="nav-link link-dark"> 
+								<a href="getOrderList.my" class="nav-link link-dark"> 
 									<svg class="bi me-2" width="16"	height="16">
 										<use xlink:href="#speedometer2"></use>
 									</svg> 주문배송
@@ -118,35 +119,33 @@
 					<table class="table table-hover my-5">
 						<thead>
 							<tr class="text-center bg-warning">
-								<th class="col-md-2">날짜</th>
 								<th class="col-md-2">주문번호</th>
-								<th class="col-md-4">상품</th>
+								<th class="col-md-6">상품</th>
 								<th class="col-md-2">주문금액</th>
 								<th class="col-md-2">상태</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<th class="text-center">2022.1.1</th>
-								<td class="text-center">2201011234</td>
-								<td>부산 언양식 불고기</td>
-								<td class="text-center">15900</td>
-								<td class="text-center">결제확인</td>
-							</tr>
-							<tr>
-								<th class="text-center">2022.1.2</th>
+							<c:forEach items="${order_list }" var="order">							
+								<tr>
+									<td class="text-center">${order.prod_code }</td>
+									<td>${order.prod_name }</td>
+									<td class="text-center">${order.total_price }</td>
+									<td class="text-center">${order.order_status }</td>
+								</tr>
+							</c:forEach>
+							<!-- <tr>
 								<td class="text-center">2201021234</td>
 								<td>연안식당 알폭탄 알탕</td>
 								<td class="text-center">12900</td>
 								<td class="text-center">결제확인</td>
 							</tr>
 							<tr>
-								<th class="text-center">2022.1.3</th>
 								<td class="text-center">2201031234</td>
 								<td>알이꽉찬 동태탕</td>
 								<td class="text-center">12900</td>
 								<td class="text-center">결제확인</td>
-							</tr>
+							</tr> -->
 						</tbody>
 					</table>
 				</div>
