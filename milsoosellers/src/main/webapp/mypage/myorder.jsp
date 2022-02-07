@@ -55,7 +55,7 @@
 							<li>나의 쇼핑</li>
 							<hr>
 							<li class="nav-item">
-								<a href="getOrderList.my" class="nav-link link-dark"> 
+								<a href="mypage" class="nav-link link-dark"> 
 									<svg class="bi me-2" width="16"	height="16">
 										<use xlink:href="#speedometer2"></use>
 									</svg> 주문배송

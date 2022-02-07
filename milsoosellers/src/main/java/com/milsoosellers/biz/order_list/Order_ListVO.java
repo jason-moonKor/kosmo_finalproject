@@ -93,7 +93,7 @@ public class Order_ListVO {
 
 	@Override
 	public String toString() {
-		return "Order_ListVO [member_id= " + member_id + ", count= " + count + ", total_price= " + total_price
+		return "Order_ListVO [member_id= " + member_id + ", prod_code= " + prod_code + ", prod_name= " + prod_name + ", count= " + count + ", total_price= " + total_price
 				+ ", order_date= " + order_date + ", address= " + address + ", order_status= " + order_status;
 	}
 	

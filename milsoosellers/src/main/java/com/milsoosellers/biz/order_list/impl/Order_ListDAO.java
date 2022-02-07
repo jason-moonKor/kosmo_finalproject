@@ -66,6 +66,8 @@ class OrderRowMapper implements RowMapper<Order_ListVO>{
 	public Order_ListVO mapRow(ResultSet rs, int rowNum) throws SQLException {
 		Order_ListVO order= new Order_ListVO();
 		order.setMember_id(rs.getString("MEMBER_ID"));
+		order.setProd_code(rs.getString("PROD_CODE"));
+		order.setProd_name(rs.getString("PROD_NAME"));
 		order.setCount(rs.getString("COUNT"));
 		order.setTotal_price(rs.getString("TOTAL_PRICE"));
 		order.setOrder_date(rs.getString("ORDER_DATE"));
