@@ -14,7 +14,7 @@ public class Order_ListServiceClient {
 		
 		Order_ListVO vo= new Order_ListVO();
 		
-		List<Order_ListVO> orderList= orderService.getOrderList(vo);
+		List<Order_ListVO> orderList= orderService.getOrderList();
 		for(Order_ListVO o : orderList) {
 			System.out.println(o.toString());
 		}

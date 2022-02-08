@@ -7,7 +7,16 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
 	
-	<context:component-scan base-package="com.milsoosellers.view"></context:component-scan>
 	<mvc:annotation-driven/>
+	<context:component-scan base-package="com.milsoosellers.view"></context:component-scan>
 	<!-- <mvc:resources mapping="/mypage/**" location="/mypage/" />  -->
+	
+	<!-- controller 메소드에서 반환하는 문자열 앞 뒤 경로 세팅 -->
+	<!-- <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/mypage/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean> -->
+	
+	<!-- 정적파일(img, css, js ,,,) 경로 세팅 -->
+	<mvc:resources mapping="/**" location="/resources/"/>
 </beans>

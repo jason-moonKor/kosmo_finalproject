@@ -12,7 +12,7 @@
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="close-modal" data-bs-dismiss="modal">
-						<img src="../assets/img/close-icon.svg" alt="Close modal" />
+						<img src="../resources/assets/img/close-icon.svg" alt="Close modal" />
 					</div>
 					<div class="container">
 						<div class="row justify-content-center">
@@ -25,7 +25,7 @@
 									</p>
 									<img
 										class="img-fluid d-block mx-auto"
-										src="../assets/img/portfolio/1.jpg"
+										src="../resources/assets/img/portfolio/1.jpg"
 										alt="..."
 									/>
 									<p>
@@ -71,7 +71,7 @@
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="close-modal" data-bs-dismiss="modal">
-						<img src="../assets/img/close-icon.svg" alt="Close modal" />
+						<img src="../resources/assets/img/close-icon.svg" alt="Close modal" />
 					</div>
 					<div class="container">
 						<div class="row justify-content-center">
@@ -84,7 +84,7 @@
 									</p>
 									<img
 										class="img-fluid d-block mx-auto"
-										src="../assets/img/portfolio/2.jpg"
+										src="../resources/assets/img/portfolio/2.jpg"
 										alt="..."
 									/>
 									<p>
@@ -130,7 +130,7 @@
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="close-modal" data-bs-dismiss="modal">
-						<img src="../assets/img/close-icon.svg" alt="Close modal" />
+						<img src="../resources/assets/img/close-icon.svg" alt="Close modal" />
 					</div>
 					<div class="container">
 						<div class="row justify-content-center">
@@ -143,7 +143,7 @@
 									</p>
 									<img
 										class="img-fluid d-block mx-auto"
-										src="../assets/img/portfolio/3.jpg"
+										src="../resources/assets/img/portfolio/3.jpg"
 										alt="..."
 									/>
 									<p>
@@ -189,7 +189,7 @@
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="close-modal" data-bs-dismiss="modal">
-						<img src="../assets/img/close-icon.svg" alt="Close modal" />
+						<img src="../resources/assets/img/close-icon.svg" alt="Close modal" />
 					</div>
 					<div class="container">
 						<div class="row justify-content-center">
@@ -202,7 +202,7 @@
 									</p>
 									<img
 										class="img-fluid d-block mx-auto"
-										src="../assets/img/portfolio/4.jpg"
+										src="../resources/assets/img/portfolio/4.jpg"
 										alt="..."
 									/>
 									<p>
@@ -248,7 +248,7 @@
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="close-modal" data-bs-dismiss="modal">
-						<img src="../assets/img/close-icon.svg" alt="Close modal" />
+						<img src="../resources/assets/img/close-icon.svg" alt="Close modal" />
 					</div>
 					<div class="container">
 						<div class="row justify-content-center">
@@ -261,7 +261,7 @@
 									</p>
 									<img
 										class="img-fluid d-block mx-auto"
-										src="../assets/img/portfolio/5.jpg"
+										src="../resources/assets/img/portfolio/5.jpg"
 										alt="..."
 									/>
 									<p>
@@ -307,7 +307,7 @@
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="close-modal" data-bs-dismiss="modal">
-						<img src="../assets/img/close-icon.svg" alt="Close modal" />
+						<img src="../resources/assets/img/close-icon.svg" alt="Close modal" />
 					</div>
 					<div class="container">
 						<div class="row justify-content-center">
@@ -320,7 +320,7 @@
 									</p>
 									<img
 										class="img-fluid d-block mx-auto"
-										src="../assets/img/portfolio/6.jpg"
+										src="../resources/assets/img/portfolio/6.jpg"
 										alt="..."
 									/>
 									<p>

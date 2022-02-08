@@ -9,7 +9,7 @@
 		<meta name="author" content="" /> -->
 		<title>밀수업자들 TEST UI 페이지</title>
 		<!-- Favicon -->
-		<link rel="icon" type="image/x-icon" href="../assets/img/icon_logo.png" />
+		<link rel="icon" type="image/x-icon" href="../resources/assets/img/icon_logo.png" />
 		<!-- Font Awesome icons (free version) -->
 		<script
 			defer
@@ -27,7 +27,7 @@
 			type="text/css"
 		/>
 		<!-- Core theme CSS (includes Bootstrap)-->
-		<link href="../css/styles.css" rel="stylesheet" />
+		<link href="../resources/css/styles.css" rel="stylesheet" />
 		<style>
 			.b {
 				border: solid 1px red;
@@ -49,7 +49,7 @@
 							<li>나의 쇼핑</li>
 							<hr>
 							<li class="nav-item">
-								<a href="mypage" class="nav-link link-dark"> 
+								<a href="myorder.do" class="nav-link link-dark"> 
 									<svg class="bi me-2" width="16"	height="16">
 										<use xlink:href="#speedometer2"></use>
 									</svg> 주문배송
@@ -158,7 +158,7 @@
 		<!-- Bootstrap core JS-->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 		<!-- Core theme JS-->
-		<script src="../js/scripts.js"></script>
+		<script src="../resources/js/scripts.js"></script>
 		<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
 		<!-- * *                               SB Forms JS                               * *-->
 		<!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->

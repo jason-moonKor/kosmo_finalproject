@@ -14,8 +14,8 @@ public class Order_ListImpl implements OrderService {
 	private Order_ListDAO order_ListDAO;
 	
 	@Override
-	public List<Order_ListVO> getOrderList(Order_ListVO vo) {
-		return order_ListDAO.getOrderList(vo);
+	public List<Order_ListVO> getOrderList() {
+		return order_ListDAO.getOrderList();
 	}
 	
 }	

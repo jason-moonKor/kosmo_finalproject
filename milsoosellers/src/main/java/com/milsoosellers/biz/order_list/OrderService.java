@@ -5,6 +5,6 @@ import java.util.List;
 public interface OrderService {
 
 	// CRUD
-	List<Order_ListVO> getOrderList(Order_ListVO vo);
+	List<Order_ListVO> getOrderList();
 
 }

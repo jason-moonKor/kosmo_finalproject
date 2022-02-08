@@ -3,7 +3,7 @@
 <%@ page import="com.milsoosellers.biz.order_list.Order_ListVO" %>
 <%@ page import="com.milsoosellers.biz.order_list.impl.Order_ListDAO" %>
 <%@ page import="java.util.List" %>
-<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 
 <!DOCTYPE html>
@@ -15,7 +15,7 @@
 		<meta name="author" content="" /> -->
 		<title>밀수업자들 TEST UI 페이지</title>
 		<!-- Favicon -->
-		<link rel="icon" type="image/x-icon" href="../assets/img/icon_logo.png" />
+		<link rel="icon" type="image/x-icon" href="../resources/assets/img/icon_logo.png" />
 		<!-- Font Awesome icons (free version) -->
 		<script
 			defer
@@ -33,7 +33,7 @@
 			type="text/css"
 		/>
 		<!-- Core theme CSS (includes Bootstrap)-->
-		<link href="../css/styles.css" rel="stylesheet" />
+		<link href="../resources/css/styles.css" rel="stylesheet" />
 		<style>
 			.b {
 				border: solid 1px red;
@@ -55,7 +55,7 @@
 							<li>나의 쇼핑</li>
 							<hr>
 							<li class="nav-item">
-								<a href="mypage" class="nav-link link-dark"> 
+								<a href="myorder.do" class="nav-link link-dark"> 
 									<svg class="bi me-2" width="16"	height="16">
 										<use xlink:href="#speedometer2"></use>
 									</svg> 주문배송
@@ -126,26 +126,14 @@
 							</tr>
 						</thead>
 						<tbody>
-							<c:forEach items="${order_list }" var="order">							
+							<c:forEach items="${orderList }" var="order">							
 								<tr>
 									<td class="text-center">${order.prod_code }</td>
-									<td>${order.prod_name }</td>
+									<td class="text-start">${order.prod_name }</td>
 									<td class="text-center">${order.total_price }</td>
 									<td class="text-center">${order.order_status }</td>
 								</tr>
 							</c:forEach>
-							<!-- <tr>
-								<td class="text-center">2201021234</td>
-								<td>연안식당 알폭탄 알탕</td>
-								<td class="text-center">12900</td>
-								<td class="text-center">결제확인</td>
-							</tr>
-							<tr>
-								<td class="text-center">2201031234</td>
-								<td>알이꽉찬 동태탕</td>
-								<td class="text-center">12900</td>
-								<td class="text-center">결제확인</td>
-							</tr> -->
 						</tbody>
 					</table>
 				</div>
@@ -166,7 +154,7 @@
 		<!-- Bootstrap core JS-->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 		<!-- Core theme JS-->
-		<script src="../js/scripts.js"></script>
+		<script src="../resources/js/scripts.js"></script>
 		<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
 		<!-- * *                               SB Forms JS                               * *-->
 		<!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->

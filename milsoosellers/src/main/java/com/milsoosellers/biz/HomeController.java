@@ -27,7 +27,7 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
-		return null;
+		return "home";
 	}
 	
 }
