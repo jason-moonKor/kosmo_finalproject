@@ -76,6 +76,7 @@
         font-weight: 900;
       }
       #required {
+      	margin-bottom: -15px;
       	font-size: 10px;
       	padding: 3px;
       	float: right;
@@ -91,6 +92,7 @@
     overflow: hidden;
     padding: 0px;
     font-weight: 200;
+    font-
 }
     </style>
   </head>
@@ -112,13 +114,14 @@
                   >회원정보 입력</span
                 >
               </h2>
-              <ul>
-                <li >
-                <div id="required">                
-                  <font color="red">*</font>필수입력사항
-                </div>
-                </li>
-              </ul>
+              <div id="required">
+                <ul>
+                  <li>
+                    <font color="red">*</font>필수입력사항
+                  </li>
+                </ul>
+              </div>
+              <div class="clear"></div>
             </div>
             <div class="resp_join_table cardview_line">
               <ul class="required">

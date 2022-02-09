@@ -34,6 +34,10 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
 	<!-- Core theme CSS (includes Bootstrap)-->
 	<link href="/resources/css/styles.css" rel="stylesheet" />
+	<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+  />
 	<!--내가 추가함-->
 	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -49,7 +53,7 @@
 
 	<style type="text/css">
 		.slider {
-			width: 100%;
+			width: 92%;
 			margin: 100px auto;
 		}
 
@@ -67,12 +71,12 @@
 		}
 
 		.slick-slide {
-			transition: all ease-in-out .3s;
-			opacity: .2;
+			/* transition: all ease-in-out .3s; */
+			opacity: 1;
 		}
 
 		.slick-active {
-			opacity: .5;
+			opacity: 1;
 		}
 
 		.slick-current {
@@ -89,7 +93,19 @@
 		#search-input {
 			margin-bottom: 5px;
 		}
-
+		.draggable {
+			padding: 0px !important;
+		}
+		#newItem,
+		#bestItem,
+		#bestRe,
+		#loog {
+			margin-bottom: -90px;
+			padding-left: 60px;
+		}
+		#bestRe {
+			margin-top: 80px;
+		}
 	</style>
 </head>
 
@@ -214,16 +230,13 @@
 	<!--중간-->
 	<section class="page-section bg-light" id="portfolio">
 		<div class="container">
-			<div class="text-center">
-				<h2 class="section-heading text-uppercase">
-					슬라이더 적용 구간
-				</h2>
-				<h3 class="section-subheading text-muted">
-					슬라이더를 적용해야 해!
-				</h3>
+			<div>
+				<h4 id="newItem">
+					<bold>새로 나왔어요!!!</bold>
+				</h4>
 			</div>
-
-			<section class="products slider">
+			<div class="products slider">
+			
 					<!-- Portfolio item 1-->
 				<div class="portfolio-item">
 					<a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
@@ -232,7 +245,7 @@
 								<i class="fas fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img class="img-fluid" src="/resources/assets/img/portfolio/1.jpg" alt="..." />
+						<img class="img-fluid" src="/resources/assets/img/new/img1.jpg" alt="..." />
 					</a>
 					<div class="portfolio-caption">
 						<div class="portfolio-caption-heading">부산집 언양 불고기</div>
@@ -251,7 +264,7 @@
 									<i class="fas fa-plus fa-3x"></i>
 								</div>
 							</div>
-							<img class="img-fluid" src="/resources/assets/img/portfolio/2.jpg" alt="..." />
+							<img class="img-fluid" src="/resources/assets/img/new/img2.jpg" alt="..." />
 						</a>
 						<div class="portfolio-caption">
 							<div class="portfolio-caption-heading">Explore</div>
@@ -270,7 +283,7 @@
 									<i class="fas fa-plus fa-3x"></i>
 								</div>
 							</div>
-							<img class="img-fluid" src="/resources/assets/img/portfolio/3.jpg" alt="..." />
+							<img class="img-fluid" src="/resources/assets/img/new/img3.jpg" alt="..." />
 						</a>
 						<div class="portfolio-caption">
 							<div class="portfolio-caption-heading">Finish</div>
@@ -289,7 +302,7 @@
 									<i class="fas fa-plus fa-3x"></i>
 								</div>
 							</div>
-							<img class="img-fluid" src="/resources/assets/img/portfolio/4.jpg" alt="..." />
+							<img class="img-fluid" src="/resources/assets/img/new/img4.jpg" alt="..." />
 						</a>
 						<div class="portfolio-caption">
 							<div class="portfolio-caption-heading">Lines</div>
@@ -308,7 +321,7 @@
 									<i class="fas fa-plus fa-3x"></i>
 								</div>
 							</div>
-							<img class="img-fluid" src="/resources/assets/img/portfolio/5.jpg" alt="..." />
+							<img class="img-fluid" src="/resources/assets/img/new/img5.jpg" alt="..." />
 						</a>
 						<div class="portfolio-caption">
 							<div class="portfolio-caption-heading">Southwest</div>
@@ -318,14 +331,13 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</div>
 
 
 			<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
 			<script src="/resources/js/slick.js" type="text/javascript" charset="utf-8"></script>
 			<script>
 				$(".products").slick({
-					//dots: true,
 					infinite: true,
 					centerMode: true,
 					slidesToShow: 3,
@@ -333,433 +345,422 @@
 				});
 			</script>
 			<!--중간 끝-->
-
-
-
-
-			<!-- Portfolio Grid-->
-			<section class="page-section bg-light" id="portfolio">
-				<div class="container">
-					<div class="text-center">
-						<h2 class="section-heading text-uppercase">
-							제품 안내 타입 예시로 쓸수있음
-						</h2>
-						<h3 class="section-subheading text-muted">
-							Lorem ipsum dolor sit amet consectetur.
-						</h3>
+			
+			
+			
+			<h4 id="bestItem">
+					<bold>베스트</bold>
+				</h4>
+			
+			<div class="products slider slider1">
+			
+					<!-- Portfolio item 1-->
+				<div class="portfolio-item">
+					<a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+						<div class="portfolio-hover">
+							<div class="portfolio-hover-content">
+								<i class="fas fa-plus fa-3x"></i>
+							</div>
+						</div>
+						<img class="img-fluid" src="/resources/assets/img/best/best1.jpg" alt="..." />
+					</a>
+					<div class="portfolio-caption">
+						<div class="portfolio-caption-heading">부산집 언양 불고기</div>
+						<div class="portfolio-caption-subheading text-muted">
+							7,900 원
+						</div>
 					</div>
-					<div class="row">
-						<div class="col-lg-4 col-sm-6 mb-4">
-							<!-- Portfolio item 1-->
-							<div class="portfolio-item">
-								<a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
-									<div class="portfolio-hover">
-										<div class="portfolio-hover-content">
-											<i class="fas fa-plus fa-3x"></i>
-										</div>
-									</div>
-									<img class="img-fluid" src="/resources/assets/img/portfolio/1.jpg" alt="..." />
-								</a>
-								<div class="portfolio-caption">
-									<div class="portfolio-caption-heading">Threads</div>
-									<div class="portfolio-caption-subheading text-muted">
-										Illustration
-									</div>
+				</div>
+
+				<div>
+					<!-- Portfolio item 2-->
+					<div class="portfolio-item">
+						<a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+							<div class="portfolio-hover">
+								<div class="portfolio-hover-content">
+									<i class="fas fa-plus fa-3x"></i>
 								</div>
 							</div>
-						</div>
-						<div class="col-lg-4 col-sm-6 mb-4">
-							<!-- Portfolio item 2-->
-							<div class="portfolio-item">
-								<a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
-									<div class="portfolio-hover">
-										<div class="portfolio-hover-content">
-											<i class="fas fa-plus fa-3x"></i>
-										</div>
-									</div>
-									<img class="img-fluid" src="/resources/assets/img/portfolio/2.jpg" alt="..." />
-								</a>
-								<div class="portfolio-caption">
-									<div class="portfolio-caption-heading">Explore</div>
-									<div class="portfolio-caption-subheading text-muted">
-										Graphic Design
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-sm-6 mb-4">
-							<!-- Portfolio item 3-->
-							<div class="portfolio-item">
-								<a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
-									<div class="portfolio-hover">
-										<div class="portfolio-hover-content">
-											<i class="fas fa-plus fa-3x"></i>
-										</div>
-									</div>
-									<img class="img-fluid" src="/resources/assets/img/portfolio/3.jpg" alt="..." />
-								</a>
-								<div class="portfolio-caption">
-									<div class="portfolio-caption-heading">Finish</div>
-									<div class="portfolio-caption-subheading text-muted">
-										Identity
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-							<!-- Portfolio item 4-->
-							<div class="portfolio-item">
-								<a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
-									<div class="portfolio-hover">
-										<div class="portfolio-hover-content">
-											<i class="fas fa-plus fa-3x"></i>
-										</div>
-									</div>
-									<img class="img-fluid" src="/resources/assets/img/portfolio/4.jpg" alt="..." />
-								</a>
-								<div class="portfolio-caption">
-									<div class="portfolio-caption-heading">Lines</div>
-									<div class="portfolio-caption-subheading text-muted">
-										Branding
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-							<!-- Portfolio item 5-->
-							<div class="portfolio-item">
-								<a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
-									<div class="portfolio-hover">
-										<div class="portfolio-hover-content">
-											<i class="fas fa-plus fa-3x"></i>
-										</div>
-									</div>
-									<img class="img-fluid" src="/resources/assets/img/portfolio/5.jpg" alt="..." />
-								</a>
-								<div class="portfolio-caption">
-									<div class="portfolio-caption-heading">Southwest</div>
-									<div class="portfolio-caption-subheading text-muted">
-										Website Design
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-sm-6">
-							<!-- Portfolio item 6-->
-							<div class="portfolio-item">
-								<a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
-									<div class="portfolio-hover">
-										<div class="portfolio-hover-content">
-											<i class="fas fa-plus fa-3x"></i>
-										</div>
-									</div>
-									<img class="img-fluid" src="/resources/assets/img/portfolio/6.jpg" alt="..." />
-								</a>
-								<div class="portfolio-caption">
-									<div class="portfolio-caption-heading">Window</div>
-									<div class="portfolio-caption-subheading text-muted">
-										Photography
-									</div>
-								</div>
+							<img class="img-fluid" src="/resources/assets/img/best/best2.jpg" alt="..." />
+						</a>
+						<div class="portfolio-caption">
+							<div class="portfolio-caption-heading">Explore</div>
+							<div class="portfolio-caption-subheading text-muted">
+								Graphic Design
 							</div>
 						</div>
 					</div>
 				</div>
-			</section>
-			<!-- About-->
-			<section class="page-section" id="about">
-				<div class="container">
-					<div class="text-center">
-						<h2 class="section-heading text-uppercase">
-							만드는 과정으로 풀이하거나 제품 제조과정소개
-						</h2>
-						<h3 class="section-subheading text-muted">
-							Lorem ipsum dolor sit amet consectetur.
-						</h3>
-					</div>
-					<ul class="timeline">
-						<li>
-							<div class="timeline-image">
-								<img class="rounded-circle img-fluid" src="/resources/assets/img/about/1.jpg" alt="..." />
-							</div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h4>2009-2011</h4>
-									<h4 class="subheading">Our Humble Beginnings</h4>
-								</div>
-								<div class="timeline-body">
-									<p class="text-muted">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-										ut voluptatum eius sapiente, totam reiciendis temporibus qui
-										quibusdam, recusandae sit vero unde, sed, incidunt et ea quo
-										dolore laudantium consectetur!
-									</p>
+				<div>
+					<!-- Portfolio item 3-->
+					<div class="portfolio-item">
+						<a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+							<div class="portfolio-hover">
+								<div class="portfolio-hover-content">
+									<i class="fas fa-plus fa-3x"></i>
 								</div>
 							</div>
-						</li>
-						<li class="timeline-inverted">
-							<div class="timeline-image">
-								<img class="rounded-circle img-fluid" src="/resources/assets/img/about/2.jpg" alt="..." />
+							<img class="img-fluid" src="/resources/assets/img/best/best3.jpg" alt="..." />
+						</a>
+						<div class="portfolio-caption">
+							<div class="portfolio-caption-heading">Finish</div>
+							<div class="portfolio-caption-subheading text-muted">
+								Identity
 							</div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h4>March 2011</h4>
-									<h4 class="subheading">An Agency is Born</h4>
-								</div>
-								<div class="timeline-body">
-									<p class="text-muted">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-										ut voluptatum eius sapiente, totam reiciendis temporibus qui
-										quibusdam, recusandae sit vero unde, sed, incidunt et ea quo
-										dolore laudantium consectetur!
-									</p>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="timeline-image">
-								<img class="rounded-circle img-fluid" src="/resources/assets/img/about/3.jpg" alt="..." />
-							</div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h4>December 2015</h4>
-									<h4 class="subheading">Transition to Full Service</h4>
-								</div>
-								<div class="timeline-body">
-									<p class="text-muted">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-										ut voluptatum eius sapiente, totam reiciendis temporibus qui
-										quibusdam, recusandae sit vero unde, sed, incidunt et ea quo
-										dolore laudantium consectetur!
-									</p>
-								</div>
-							</div>
-						</li>
-						<li class="timeline-inverted">
-							<div class="timeline-image">
-								<img class="rounded-circle img-fluid" src="/resources/assets/img/about/4.jpg" alt="..." />
-							</div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h4>July 2020</h4>
-									<h4 class="subheading">Phase Two Expansion</h4>
-								</div>
-								<div class="timeline-body">
-									<p class="text-muted">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-										ut voluptatum eius sapiente, totam reiciendis temporibus qui
-										quibusdam, recusandae sit vero unde, sed, incidunt et ea quo
-										dolore laudantium consectetur!
-									</p>
-								</div>
-							</div>
-						</li>
-						<li class="timeline-inverted">
-							<div class="timeline-image">
-								<h4>
-									Be Part
-									<br />
-									Of Our
-									<br />
-									Story!
-								</h4>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<!-- Team-->
-			<section class="page-section bg-light" id="team">
-				<div class="container">
-					<div class="text-center">
-						<h2 class="section-heading text-uppercase">팀 소개해도되고 말고</h2>
-						<h3 class="section-subheading text-muted">
-							Lorem ipsum dolor sit amet consectetur.
-						</h3>
-					</div>
-					<div class="row">
-						<div class="col-lg-4">
-							<div class="team-member">
-								<img class="mx-auto rounded-circle" src="/resources/assets/img/team/1.jpg" alt="..." />
-								<h4>Parveen Anand</h4>
-								<p class="text-muted">Lead Designer</p>
-								<a class="btn btn-dark btn-social mx-2" href="#!">
-									<i class="fab fa-twitter"></i>
-								</a>
-								<a class="btn btn-dark btn-social mx-2" href="#!">
-									<i class="fab fa-facebook-f"></i>
-								</a>
-								<a class="btn btn-dark btn-social mx-2" href="#!">
-									<i class="fab fa-linkedin-in"></i>
-								</a>
-							</div>
-						</div>
-						<div class="col-lg-4">
-							<div class="team-member">
-								<img class="mx-auto rounded-circle" src="/resources/assets/img/team/2.jpg" alt="..." />
-								<h4>Diana Petersen</h4>
-								<p class="text-muted">Lead Marketer</p>
-								<a class="btn btn-dark btn-social mx-2" href="#!">
-									<i class="fab fa-twitter"></i>
-								</a>
-								<a class="btn btn-dark btn-social mx-2" href="#!">
-									<i class="fab fa-facebook-f"></i>
-								</a>
-								<a class="btn btn-dark btn-social mx-2" href="#!">
-									<i class="fab fa-linkedin-in"></i>
-								</a>
-							</div>
-						</div>
-						<div class="col-lg-4">
-							<div class="team-member">
-								<img class="mx-auto rounded-circle" src="/resources/assets/img/team/3.jpg" alt="..." />
-								<h4>Larry Parker</h4>
-								<p class="text-muted">Lead Developer</p>
-								<a class="btn btn-dark btn-social mx-2" href="#!">
-									<i class="fab fa-twitter"></i>
-								</a>
-								<a class="btn btn-dark btn-social mx-2" href="#!">
-									<i class="fab fa-facebook-f"></i>
-								</a>
-								<a class="btn btn-dark btn-social mx-2" href="#!">
-									<i class="fab fa-linkedin-in"></i>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-lg-8 mx-auto text-center">
-							<p class="large text-muted">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
-								eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam
-								corporis ea, alias ut unde.
-							</p>
 						</div>
 					</div>
 				</div>
-			</section>
-			<!-- Clients-->
-			<div class="py-5">
-				<div class="container">
-					<div class="row align-items-center">
-						<div class="col-md-3 col-sm-6 my-3">
-							<a href="#!">
-								<img class="img-fluid img-brand d-block mx-auto" src="/resources/assets/img/logos/microsoft.svg"
-									alt="..." />
-							</a>
+				<div>
+					<!-- Portfolio item 4-->
+					<div class="portfolio-item">
+						<a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+							<div class="portfolio-hover">
+								<div class="portfolio-hover-content">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid" src="/resources/assets/img/best/best4.jpg" alt="..." />
+						</a>
+						<div class="portfolio-caption">
+							<div class="portfolio-caption-heading">Lines</div>
+							<div class="portfolio-caption-subheading text-muted">
+								Branding
+							</div>
 						</div>
-						<div class="col-md-3 col-sm-6 my-3">
-							<a href="#!">
-								<img class="img-fluid img-brand d-block mx-auto" src="/resources/assets/img/logos/google.svg"
-									alt="..." />
-							</a>
-						</div>
-						<div class="col-md-3 col-sm-6 my-3">
-							<a href="#!">
-								<img class="img-fluid img-brand d-block mx-auto" src="/resources/assets/img/logos/facebook.svg"
-									alt="..." />
-							</a>
-						</div>
-						<div class="col-md-3 col-sm-6 my-3">
-							<a href="#!">
-								<img class="img-fluid img-brand d-block mx-auto" src="/resources/assets/img/logos/ibm.svg"
-									alt="..." />
-							</a>
+					</div>
+				</div>
+				<div>
+					<!-- Portfolio item 5-->
+					<div class="portfolio-item">
+						<a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+							<div class="portfolio-hover">
+								<div class="portfolio-hover-content">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid" src="/resources/assets/img/best/best5.jpg" alt="..." />
+						</a>
+						<div class="portfolio-caption">
+							<div class="portfolio-caption-heading">Southwest</div>
+							<div class="portfolio-caption-subheading text-muted">
+								Website Design
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- Contact-->
-			<section class="page-section" id="contact">
-				<div class="container">
-					<div class="text-center">
-						<h2 class="section-heading text-uppercase">Contact Us 및 문의하기</h2>
-						<h3 class="section-subheading text-muted">
-							Lorem ipsum dolor sit amet consectetur.
-						</h3>
+			
+			<script>
+				$(".slider1").slick({
+					infinite: true,
+					centerMode: true,
+					slidesToShow: 4,
+					slidesToScroll: 3
+				});
+			</script>
+			
+			
+			<img src="/resources/assets/img/banner.jpg">
+			
+				<h6 id="bestRe">
+					<bold>재구매Best</bold>
+				</h6>
+			<div class="products slider slider2">
+			
+					<!-- Portfolio item 1-->
+				<div class="portfolio-item">
+					<a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+						<div class="portfolio-hover">
+							<div class="portfolio-hover-content">
+								<i class="fas fa-plus fa-3x"></i>
+							</div>
+						</div>
+						<img class="img-fluid" src="/resources/assets/img/re/re1.jpg" alt="..." />
+					</a>
+					<div class="portfolio-caption">
+						<div class="portfolio-caption-heading">부산집 언양 불고기</div>
+						<div class="portfolio-caption-subheading text-muted">
+							7,900 원
+						</div>
 					</div>
-					<!-- * * * * * * * * * * * * * * *-->
-					<!-- * * SB Forms Contact Form * *-->
-					<!-- * * * * * * * * * * * * * * *-->
-					<!-- This form is pre-integrated with SB Forms.-->
-					<!-- To make this form functional, sign up at-->
-					<!-- https://startbootstrap.com/solution/contact-forms-->
-					<!-- to get an API token!-->
-					<form id="contactForm" data-sb-form-api-token="API_TOKEN">
-						<div class="row align-items-stretch mb-5">
-							<div class="col-md-6">
-								<div class="form-group">
-									<!-- Name input-->
-									<input class="form-control" id="name" type="text" placeholder="Your Name *"
-										data-sb-validations="required" />
-									<div class="invalid-feedback" data-sb-feedback="name:required">
-										A name is required.
-									</div>
-								</div>
-								<div class="form-group">
-									<!-- Email address input-->
-									<input class="form-control" id="email" type="email" placeholder="Your Email *"
-										data-sb-validations="required,email" />
-									<div class="invalid-feedback" data-sb-feedback="email:required">
-										An email is required.
-									</div>
-									<div class="invalid-feedback" data-sb-feedback="email:email">
-										Email is not valid.
-									</div>
-								</div>
-								<div class="form-group mb-md-0">
-									<!-- Phone number input-->
-									<input class="form-control" id="phone" type="tel" placeholder="Your Phone *"
-										data-sb-validations="required" />
-									<div class="invalid-feedback" data-sb-feedback="phone:required">
-										A phone number is required.
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group form-group-textarea mb-md-0">
-									<!-- Message input-->
-									<textarea class="form-control" id="message" placeholder="Your Message *"
-										data-sb-validations="required"></textarea>
-									<div class="invalid-feedback" data-sb-feedback="message:required">
-										A message is required.
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- Submit success message-->
-						<!---->
-						<!-- This is what your users will see when the form-->
-						<!-- has successfully submitted-->
-						<div class="d-none" id="submitSuccessMessage">
-							<div class="text-center text-white mb-3">
-								<div class="fw-bolder">Form submission successful!</div>
-								To activate this form, sign up at
-								<br />
-								<a href="https://startbootstrap.com/solution/contact-forms">
-									https://startbootstrap.com/solution/contact-forms
-								</a>
-							</div>
-						</div>
-						<!-- Submit error message-->
-						<!---->
-						<!-- This is what your users will see when there is-->
-						<!-- an error submitting the form-->
-						<div class="d-none" id="submitErrorMessage">
-							<div class="text-center text-danger mb-3">
-								Error sending message!
-							</div>
-						</div>
-						<!-- Submit Button-->
-						<div class="text-center">
-							<button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton"
-								type="submit">
-								Send Message
-							</button>
-						</div>
-					</form>
 				</div>
-			</section>
+
+				<div>
+					<!-- Portfolio item 2-->
+					<div class="portfolio-item">
+						<a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+							<div class="portfolio-hover">
+								<div class="portfolio-hover-content">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid" src="/resources/assets/img/re/re2.jpg" alt="..." />
+						</a>
+						<div class="portfolio-caption">
+							<div class="portfolio-caption-heading">Explore</div>
+							<div class="portfolio-caption-subheading text-muted">
+								Graphic Design
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<!-- Portfolio item 3-->
+					<div class="portfolio-item">
+						<a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+							<div class="portfolio-hover">
+								<div class="portfolio-hover-content">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid" src="/resources/assets/img/re/re3.jpg" alt="..." />
+						</a>
+						<div class="portfolio-caption">
+							<div class="portfolio-caption-heading">Finish</div>
+							<div class="portfolio-caption-subheading text-muted">
+								Identity
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<!-- Portfolio item 4-->
+					<div class="portfolio-item">
+						<a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+							<div class="portfolio-hover">
+								<div class="portfolio-hover-content">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid" src="/resources/assets/img/re/re4.jpg" alt="..." />
+						</a>
+						<div class="portfolio-caption">
+							<div class="portfolio-caption-heading">Lines</div>
+							<div class="portfolio-caption-subheading text-muted">
+								Branding
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<!-- Portfolio item 5-->
+					<div class="portfolio-item">
+						<a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+							<div class="portfolio-hover">
+								<div class="portfolio-hover-content">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid" src="/resources/assets/img/re/re5.jpg" alt="..." />
+						</a>
+						<div class="portfolio-caption">
+							<div class="portfolio-caption-heading">Southwest</div>
+							<div class="portfolio-caption-subheading text-muted">
+								Website Design
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<!-- Portfolio item 4-->
+					<div class="portfolio-item">
+						<a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+							<div class="portfolio-hover">
+								<div class="portfolio-hover-content">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid" src="/resources/assets/img/re/re6.jpg" alt="..." />
+						</a>
+						<div class="portfolio-caption">
+							<div class="portfolio-caption-heading">Lines</div>
+							<div class="portfolio-caption-subheading text-muted">
+								Branding
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<!-- Portfolio item 4-->
+					<div class="portfolio-item">
+						<a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+							<div class="portfolio-hover">
+								<div class="portfolio-hover-content">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid" src="/resources/assets/img/re/re7.jpg" alt="..." />
+						</a>
+						<div class="portfolio-caption">
+							<div class="portfolio-caption-heading">Lines</div>
+							<div class="portfolio-caption-subheading text-muted">
+								Branding
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<script>
+				$(".slider2").slick({
+					infinite: true,
+					centerMode: true,
+					slidesToShow: 5,
+					slidesToScroll: 3
+				});
+			</script>
+			
+				<h6 id="loog">
+					<bold>정기구독</bold>
+				</h6>
+			<div class="products slider slider3">
+			
+					<!-- Portfolio item 1-->
+				<div class="portfolio-item">
+					<a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+						<div class="portfolio-hover">
+							<div class="portfolio-hover-content">
+								<i class="fas fa-plus fa-3x"></i>
+							</div>
+						</div>
+						<img class="img-fluid" src="/resources/assets/img/loog/loog1.jpg" alt="..." />
+					</a>
+					<div class="portfolio-caption">
+						<div class="portfolio-caption-heading">부산집 언양 불고기</div>
+						<div class="portfolio-caption-subheading text-muted">
+							7,900 원
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<!-- Portfolio item 2-->
+					<div class="portfolio-item">
+						<a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+							<div class="portfolio-hover">
+								<div class="portfolio-hover-content">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid" src="/resources/assets/img/re/re7.jpg" alt="..." />
+						</a>
+						<div class="portfolio-caption">
+							<div class="portfolio-caption-heading">Explore</div>
+							<div class="portfolio-caption-subheading text-muted">
+								Graphic Design
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<!-- Portfolio item 3-->
+					<div class="portfolio-item">
+						<a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+							<div class="portfolio-hover">
+								<div class="portfolio-hover-content">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid" src="/resources/assets/img/re/re8.jpg" alt="..." />
+						</a>
+						<div class="portfolio-caption">
+							<div class="portfolio-caption-heading">Finish</div>
+							<div class="portfolio-caption-subheading text-muted">
+								Identity
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<!-- Portfolio item 4-->
+					<div class="portfolio-item">
+						<a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+							<div class="portfolio-hover">
+								<div class="portfolio-hover-content">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid" src="/resources/assets/img/loog/loog2.jpg" alt="..." />
+						</a>
+						<div class="portfolio-caption">
+							<div class="portfolio-caption-heading">Lines</div>
+							<div class="portfolio-caption-subheading text-muted">
+								Branding
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<!-- Portfolio item 5-->
+					<div class="portfolio-item">
+						<a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+							<div class="portfolio-hover">
+								<div class="portfolio-hover-content">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid" src="/resources/assets/img/loog/loog3.jpg" alt="..." />
+						</a>
+						<div class="portfolio-caption">
+							<div class="portfolio-caption-heading">Southwest</div>
+							<div class="portfolio-caption-subheading text-muted">
+								Website Design
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<!-- Portfolio item 4-->
+					<div class="portfolio-item">
+						<a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+							<div class="portfolio-hover">
+								<div class="portfolio-hover-content">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid" src="/resources/assets/img/loog/loog4.jpg" alt="..." />
+						</a>
+						<div class="portfolio-caption">
+							<div class="portfolio-caption-heading">Lines</div>
+							<div class="portfolio-caption-subheading text-muted">
+								Branding
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<!-- Portfolio item 4-->
+					<div class="portfolio-item">
+						<a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+							<div class="portfolio-hover">
+								<div class="portfolio-hover-content">
+									<i class="fas fa-plus fa-3x"></i>
+								</div>
+							</div>
+							<img class="img-fluid" src="/resources/assets/img/loog/loog5.jpg" alt="..." />
+						</a>
+						<div class="portfolio-caption">
+							<div class="portfolio-caption-heading">Lines</div>
+							<div class="portfolio-caption-subheading text-muted">
+								Branding
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<script>
+				$(".slider3").slick({
+					infinite: true,
+					centerMode: true,
+					slidesToShow: 5,
+					slidesToScroll: 3
+				});
+			</script>
+			
+
+
+
 			<!-- Footer-->
 			<footer class="footer py-4">
 				<div class="container">
