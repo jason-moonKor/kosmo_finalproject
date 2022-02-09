@@ -1,4 +1,4 @@
-package com.milsoosellers.biz.order_list.impl;
+package com.milsoosellers.biz.mypage.impl;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -13,7 +13,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import com.milsoosellers.biz.common.JDBCUtil;
-import com.milsoosellers.biz.order_list.Order_ListVO;
+import com.milsoosellers.biz.mypage.Order_ListVO;
 
 //@Repository("order_ListDAO")
 @Repository

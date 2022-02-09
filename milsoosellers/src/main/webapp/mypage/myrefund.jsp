@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="com.milsoosellers.biz.mypage.Order_ListVO" %>
+<%@ page import="com.milsoosellers.biz.mypage.impl.Order_ListDAO" %>
+<%@ page import="java.util.List" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -10,6 +16,8 @@
 		<title>밀수업자들 TEST UI 페이지</title>
 		<!-- Favicon -->
 		<link rel="icon" type="image/x-icon" href="../resources/assets/img/icon_logo.png" />
+		<link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/resources/assets/img/icon_logo.png" />
+		
 		<!-- Font Awesome icons (free version) -->
 		<script
 			defer
@@ -28,6 +36,7 @@
 		/>
 		<!-- Core theme CSS (includes Bootstrap)-->
 		<link href="../resources/css/styles.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/styles.css">
 		<style>
 			.b {
 				border: solid 1px red;
@@ -56,14 +65,14 @@
 								</a>
 							</li>
 							<li>
-								<a href="./myrefund.jsp" class="nav-link link-dark">
+								<a href="myrefund.do" class="nav-link link-dark">
 									<svg class="bi me-2" width="16" height="16">
 										<use xlink:href="#speedometer2"></use>
 									</svg> 취소환불
 								</a>
 							</li>
 							<li>
-								<a href="./myaddr.jsp" class="nav-link link-dark">
+								<a href="myaddr.do" class="nav-link link-dark">
 									<svg class="bi me-2" width="16" height="16">
 										<use xlink:href="#table"></use>
 									</svg> 배송주소록
@@ -112,31 +121,28 @@
 					<table class="table table-hover my-5">
 						<thead>
 							<tr class="text-center bg-warning">
-								<th class="col-md-2">날짜</th>
+								<!-- <th class="col-md-2">날짜</th>
 								<th class="col-md-2">주문번호</th>
 								<th class="col-md-6">상품</th>
+								<th class="col-md-2">상태</th> -->
+								<th class="col-md-2">주문번호</th>
+								<th class="col-md-6">상품</th>
+								<th class="col-md-2">주문금액</th>
 								<th class="col-md-2">상태</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<th class="text-center">2022.1.1</th>
-								<td class="text-center">2201011234</td>
-								<td>부산 언양식 불고기</td>
-								<td class="text-center">환불완료</td>
-							</tr>
-							<tr>
-								<th class="text-center">2022.1.2</th>
-								<td class="text-center">2201021234</td>
-								<td>연안식당 알폭탄 알탕</td>
-								<td class="text-center">환불완료</td>
-							</tr>
-							<tr>
-								<th class="text-center">2022.1.3</th>
-								<td class="text-center">2201031234</td>
-								<td>알이꽉찬 동태탕</td>
-								<td class="text-center">환불완료</td>
-							</tr>
+							<c:forEach items="${orderList}" var="order">
+							<fmt:parseNumber value="${order.order_status }" var="parseVal"/>
+								<c:if test="${parseVal == 2 }">
+									<tr>
+										<td class="text-center">${order.prod_code}</td>
+										<td class="text-start">${order.prod_name}</td>
+										<td class="text-center">${order.total_price}</td>
+										<td class="text-center">환불완료</td>
+									</tr>
+								</c:if>							
+							</c:forEach>
 						</tbody>
 					</table>
 					<br>
@@ -178,6 +184,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 		<!-- Core theme JS-->
 		<script src="../resources/js/scripts.js"></script>
+		<script src="${pageContext.request.contextPath}/resources/js/scripts.js"></script>
 		<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
 		<!-- * *                               SB Forms JS                               * *-->
 		<!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->

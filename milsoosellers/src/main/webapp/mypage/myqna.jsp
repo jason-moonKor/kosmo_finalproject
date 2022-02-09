@@ -56,14 +56,14 @@
 								</a>
 							</li>
 							<li>
-								<a href="./myrefund.jsp" class="nav-link link-dark">
+								<a href="myrefund.do" class="nav-link link-dark">
 									<svg class="bi me-2" width="16" height="16">
 										<use xlink:href="#speedometer2"></use>
 									</svg> 취소환불
 								</a>
 							</li>
 							<li>
-								<a href="./myaddr.jsp" class="nav-link link-dark">
+								<a href="myaddr.do" class="nav-link link-dark">
 									<svg class="bi me-2" width="16" height="16">
 										<use xlink:href="#table"></use>
 									</svg> 배송주소록
@@ -155,6 +155,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 		<!-- Core theme JS-->
 		<script src="../resources/js/scripts.js"></script>
+		<script src="${pageContext.request.contextPath}/resources/js/scripts.js"></script>
 		<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
 		<!-- * *                               SB Forms JS                               * *-->
 		<!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->

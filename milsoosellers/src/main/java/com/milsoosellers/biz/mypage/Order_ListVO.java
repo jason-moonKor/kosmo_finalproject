@@ -1,4 +1,4 @@
-package com.milsoosellers.biz.order_list;
+package com.milsoosellers.biz.mypage;
 
 public class Order_ListVO {
 	private String member_id;

@@ -1,4 +1,4 @@
-package com.milsoosellers.biz.order_list;
+package com.milsoosellers.biz.mypage;
 
 import java.util.List;
 

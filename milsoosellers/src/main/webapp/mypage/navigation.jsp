@@ -4,7 +4,7 @@
 		<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
 			<div class="container">
 				<a class="navbar-brand" href="#page-top">
-					<img src="../resources/assets/img/logos/logo.svg" />
+					<img src="${pageContext.request.contextPath}/resources/assets/img/logos/logo.svg" />
 				</a>
 				<!-- <img src="" / width="25px"> -->
 				<!-- <i id="iconn" class="fas fa-seedling"></i> -->
@@ -29,7 +29,7 @@
 							<a class="nav-link" href="#portfolio">Join Us</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="/mypage/myorder">MyPage</a>
+							<a class="nav-link" href="myorder.do">MyPage</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#team">OrderList</a>
