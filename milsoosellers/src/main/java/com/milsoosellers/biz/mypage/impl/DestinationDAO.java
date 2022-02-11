@@ -10,16 +10,28 @@ import org.springframework.stereotype.Repository;
 
 import com.milsoosellers.biz.common.JDBCUtil;
 import com.milsoosellers.biz.mypage.DestinationVO;
-import com.milsoosellers.biz.mypage.MemberVO;
 
 @Repository
 public class DestinationDAO {
 
 	// SQL
-	private final String ADDR_SELECT= "SELECT dest_id, mem_tel, address, zipcode "
+	private final String INSERT_ADDR= "";
+	private final String DELEET_ADDR= "DELETE FROM destination WHERE member_id=? AND dest_id= ? ; ";
+	
+	private final String GET_ADDRLIST= "SELECT d.member_id, dest_id, member_tel, address, zipcode "
+			+ "FROM destination AS d JOIN member AS m "
+			+ "ON d.member_id= m.member_id "
+			+ "WHERE m.member_id= 'aaa' ;";
+	
+	private final String UPDATE_ADDR= "update destination as d join `member` as m "
+			+ "on d.member_id= m.member_id "
+			+ "set m.member_tel= ?, d.dest_id= ?, d.address=?, d.zipcode= ? "
+			+ "where d.member_id= ? and d.dest_id= ? ;";
+	
+	private final String GET_ADDR= "SELECT m.member_id, dest_id, member_tel, address, zipcode "
 			+ "FROM destination AS d JOIN `member` AS m "
 			+ "ON d.member_id= m.member_id "
-			+ "WHERE m.member_id='aaa';";
+			+ "WHERE d.member_id=? AND d.dest_id= ? ;";
 
 	
 	// JDBC 
@@ -28,28 +40,82 @@ public class DestinationDAO {
 	private ResultSet rs= null;
 	
 	// CRUD (JDBCUtil)
-	public List<DestinationVO> getDestList(){
-		List<DestinationVO> destList= new ArrayList<DestinationVO>();
-		List<MemberVO> memList= new ArrayList<MemberVO>();
+	public void insertDest() {
+		
+	}
+	
+	public void deleteDest() {
+		
+	}
+	
+	public void updateDest(DestinationVO vo) {
+		System.out.println("==> JDBC로 updateDest() 수행");
+
 		try {
 			conn= JDBCUtil.getConnection();
-			pstmt= conn.prepareStatement(ADDR_SELECT);
+			pstmt= conn.prepareStatement(UPDATE_ADDR);
+			pstmt.setString(1, vo.getMember_tel());
+			pstmt.setString(2, vo.getDest_id());
+			pstmt.setString(3, vo.getAddress());
+			pstmt.setString(4, vo.getZipcode());
+			pstmt.setString(5, vo.getMember_id());
+			pstmt.setString(6, vo.getOrigin_dest_id());
+			System.out.println(pstmt.toString());
+			pstmt.executeUpdate();	
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			JDBCUtil.close(rs, pstmt, conn);
+		}
+	}
+	
+	public DestinationVO getDest(DestinationVO vo) {
+		DestinationVO dest= null;
+		try {
+			conn= JDBCUtil.getConnection();
+			pstmt= conn.prepareStatement(GET_ADDR);
+			pstmt.setString(1, vo.getMember_id());
+			pstmt.setString(2, vo.getDest_id());
+			rs= pstmt.executeQuery();
+			if(rs.next()) {
+				dest= new DestinationVO();
+				dest.setMember_id(rs.getString("MEMBER_ID"));
+				dest.setDest_id(rs.getString("DEST_ID"));
+				dest.setMember_tel(rs.getString("MEMBER_TEL"));
+				dest.setAddress(rs.getString("ADDRESS"));
+				dest.setZipcode(rs.getString("ZIPCODE"));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			JDBCUtil.close(rs, pstmt, conn);
+		}
+		return dest;
+	}
+	
+	public List<DestinationVO> getDestList(){
+		System.out.println("==> JDBC로 getDestList() 수행");
+		List<DestinationVO> destList= new ArrayList<DestinationVO>();
+		try {
+			conn= JDBCUtil.getConnection();
+			pstmt= conn.prepareStatement(GET_ADDRLIST);
+			//pstmt.setString(1, "abcd");
 			rs= pstmt.executeQuery();
 			while(rs.next()) {
 				DestinationVO dest= new DestinationVO();
-				MemberVO mem= new MemberVO();
-				
+				dest.setMember_id(rs.getString("MEMBER_ID"));
 				dest.setDest_id(rs.getString("DEST_ID"));
-				mem.setMember_tel(rs.getString("MEM_TEL"));
+				dest.setMember_tel(rs.getString("MEMBER_TEL"));
 				dest.setAddress(rs.getString("ADDRESS"));
 				dest.setZipcode(rs.getString("ZIPCODE"));
 				
+				System.out.println(rs.getString("MEMBER_ID"));
 				System.out.println(rs.getString("DEST_ID"));
-				System.out.println(rs.getString("MEM_TEL"));
+				System.out.println(rs.getString("MEMBER_TEL"));
 				System.out.println(rs.getString("ADDRESS"));
 				System.out.println(rs.getString("ZIPCODE"));
 				destList.add(dest);
-				memList.add(mem);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

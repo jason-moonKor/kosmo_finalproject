@@ -123,21 +123,25 @@
 						<thead>
 							<tr class="text-center bg-warning">
 								<th class="col-md-2">주문번호</th>
-								<th class="col-md-6">상품</th>
+								<th class="col-md-5">상품</th>
 								<th class="col-md-2">주문금액</th>
-								<th class="col-md-2">상태</th>
+								<th class="col-md-3">상태</th>
 							</tr>
 						</thead>
 						<tbody>
 							<c:forEach items="${orderList}" var="order">
 							<fmt:parseNumber value="${order.order_status }" var="parseVal"/>
 								<c:if test="${parseVal == 1 }">
-									<tr>
-										<td class="text-center">${order.prod_code}</td>
-										<td class="text-start">${order.prod_name}</td>
-										<td class="text-center">${order.total_price}</td>
-										<td class="text-center">주문완료</td>
-									</tr>
+									<form action="updateorder.do" method="get">
+										<input type="hidden" name="order_status" value="${order.order_status }"/>
+										<input type="hidden" name="prod_code" value="${order.prod_code }"/>
+										<tr>
+											<td class="text-center">${order.prod_code}</td>
+											<td class="text-start">${order.prod_name}</td>
+											<td class="text-center">${order.total_price}</td>
+											<td class="text-center">주문완료 &nbsp;&nbsp; <input type="submit" class="btn btn-outline-warning btn-sm" value="주문취소"/></td>
+										</tr>
+									</form>
 								</c:if>							
 							</c:forEach>
 						</tbody>

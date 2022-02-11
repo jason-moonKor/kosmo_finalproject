@@ -128,19 +128,27 @@
 						</thead>
 						<tbody>
 							<c:forEach items="${destList}" var="dest">
-							<tr>
-								<th class="text-center">${dest.dest_id }</th>
-								<td class="text-start">${dest.address }</td>
-								<td class="text-center">${dest.mem_tel }</td>
-								<td class="text-center">
-									<button type="button" class="btn btn-outline-warning btn-sm">수정</button>
-									<button type="button" class="btn btn-outline-warning btn-sm">삭제</button>
-								</td>
-							</tr>
+							<form action="getaddr.do?member_id=${dest.member_id}&dest_id=${dest.dest_id}" method="get">
+								<tr>
+									<input name="member_id" type="hidden" value="${dest.member_id }">
+									<input name="dest_id" type="hidden" value="${dest.dest_id }">
+									<input name="member_tel" type="hidden" value="${dest.member_tel }">
+									<input name="address" type="hidden" value="${dest.address }">
+									<input name="zipcode" type="hidden" value="${dest.zipcode }">
+									
+									<th class="text-center">${dest.dest_id }</th>
+									<td class="text-start">${dest.address }</td>
+									<td class="text-center">${dest.member_tel }</td>
+									<td class="text-center">
+										<input type="submit" class="btn btn-outline-warning btn-sm" value="수정">
+										<button type="button" class="btn btn-outline-warning btn-sm">삭제</button>
+									</td>
+								</tr>
+							</form>
 							</c:forEach>
 						</tbody>
 					</table>
-					<button type="button" class="btn btn-warning">등록</button>
+					<button onclick="locatioin.href=getaddr.jsp" type="button" class="btn btn-warning">등록</button>
 				</div>
 
 			</div>

@@ -18,12 +18,15 @@ import com.milsoosellers.biz.mypage.Order_ListVO;
 //@Repository("order_ListDAO")
 @Repository
 public class Order_ListDAO {
-	@Autowired
-	private JdbcTemplate jdbcTemplate;
+	//@Autowired
+	//private JdbcTemplate jdbcTemplate;
 	
 	// SQL 명령어
-	private final String ORDER_SELECT= "SELECT * FROM ORDER_LIST";
+	private final String ORDER_SELECT= "SELECT * FROM ORDER_LIST;";
 
+	private final String UPDATE_ORDER= "UPDATE order_list "
+			+ "SET order_status='2' "
+			+ "WHERE prod_code= ? ; ";
 	
 	
 	
@@ -45,6 +48,22 @@ public class Order_ListDAO {
 		
 	
 	// CRUD (JDBCUtil)
+	
+	public void updateOrderList(Order_ListVO vo) {
+		System.out.println("==> JDBC로 updateOrderList() 수행");
+		try {
+			conn= JDBCUtil.getConnection();
+			pstmt= conn.prepareStatement(UPDATE_ORDER);
+			pstmt.setString(1, vo.getProd_code());
+			pstmt.executeUpdate();
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			JDBCUtil.close(rs, pstmt, conn);
+		}
+	}
+	
 	public List<Order_ListVO> getOrderList(){
 		System.out.println("==> JDBC로 getOrderList() 수행");
 		List<Order_ListVO> orderList= new ArrayList<Order_ListVO>();

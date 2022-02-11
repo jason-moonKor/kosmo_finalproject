@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="com.milsoosellers.biz.mypage.DestinationVO" %>
+<%@ page import="com.milsoosellers.biz.mypage.impl.DestinationDAO" %>
+<%@ page import="java.util.List" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+    
 <!DOCTYPE html>
 <html>
 	<head>
@@ -34,21 +40,24 @@
 			.b {
 				border: solid 1px red;
 			}
-	      .info ul {
-	        list-style: none;
-	      }
-	      .info .col1 {
-	        display: inline-block;
-	        background-color: #e9ecef;
-	      }
-	      .info .col2 {
-	        display: inline-block;
-	      }
-		</style>
+			
+			.addr ul {
+				list-style: none;
+			}
+			
+			.addr .col1 {
+				display: inline-block;
+				background-color: #e9ecef;
+			}
+			
+			.addr .col2 {
+				display: inline-block;
+			}
+</style>
 	</head>
 	<body id="page-top">
 	<!-- Navigation-->
-	<%@ include file="navigation.jsp"%>
+	<%@ include file="navigation.jsp" %>
 
 	<section class="page-section bg-light">
 		<div class="container">
@@ -117,53 +126,43 @@
 
 
 				<div class="col-md-10 p-5">
-					<h3 class="text-center">회원정보 수정</h3>
+					<h3 class="text-center">배송지 정보</h3>
 					<br>
 					<br>
-
-					<div class="info">
-						<ul>
-							<li class="m-3">
-								<ul>
-									<li class="col1 col-md-2">아이디</li>
-									<li class="col2 col-md-8"><input type="text"></li>
-								</ul>
-							</li>
-							<li class="m-3">
-								<ul>
-									<li class="col1 col-md-2">기존비밀번호</li>
-									<li class="col2 col-md-8"><input type="text"></li>
-								</ul>
-							</li>
-							<li class="m-3">
-								<ul>
-									<li class="col1 col-md-2">신규비밀번호</li>
-									<li class="col2 col-md-8"><input type="text"></li>
-								</ul>
-							</li>
-							<li class="m-3">
-								<ul>
-									<li class="col1 col-md-2">이름</li>
-									<li class="col2 col-md-8"><input type="text"></li>
-								</ul>
-							</li>
-							<li class="m-3">
-								<ul>
-									<li class="col1 col-md-2">이메일</li>
-									<li class="col2 col-md-8"></li>
-								</ul>
-							</li>
-							<li class="m-3">
-								<ul>
-									<li class="col1 col-md-2">전화번호</li>
-									<li class="col2 col-md-8"></li>
-								</ul>
-							</li>
-						</ul>
-
-
-					</div>
-
+					<form action="updateaddr.do" method="get">
+						<input type="hidden" name="member_id" value="${dest.member_id }"/>
+						<input type="hidden" name="origin_dest_id" value="${dest.dest_id }"/>
+						<div class="addr">
+							<ul>
+								<li class="m-3">
+									<ul>
+										<li class="col1 col-md-2">배송지명</li>
+										<li class="col2 col-md-8"><input name="dest_id" type="text" value="${dest.dest_id }"/></li>
+									</ul>
+								</li>
+								<li class="m-3">
+									<ul>
+										<li class="col1 col-md-2">주소</li>
+										<li class="col2 col-md-8"><input name="address" type="text" value="${dest.address }"/></li>
+									</ul>
+								</li>
+								<li class="m-3">
+									<ul>
+										<li class="col1 col-md-2">연락처</li>
+										<li class="col2 col-md-8"><input name="member_tel" type="text" value="${dest.member_tel }"/></li>
+									</ul>
+								</li>
+								<li class="m-3">
+									<ul>
+										<li class="col1 col-md-2">우편번호</li>
+										<li class="col2 col-md-8"><input name="zipcode" type="text" value="${dest.zipcode }"/></li>
+									</ul>
+								</li>
+							</ul>
+	
+						</div>
+						<input type="submit" class="btn btn-warning" value="등록">
+					</form>
 				</div>
 
 			</div>
@@ -177,7 +176,7 @@
 		<%@ include file="footer.jsp" %>
 		
 		<!-- Portfolio Modals-->
-		<%@ include file="modals.jsp" %>
+		<%@ include file="modals.jsp" %>		
 		
 		<!-- Bootstrap core JS-->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
