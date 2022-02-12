@@ -15,8 +15,9 @@ import com.milsoosellers.biz.mypage.DestinationVO;
 public class DestinationDAO {
 
 	// SQL
-	private final String INSERT_ADDR= "";
-	private final String DELEET_ADDR= "DELETE FROM destination WHERE member_id=? AND dest_id= ? ; ";
+	private final String INSERT_ADDR= "INSERT INTO destination (DEST_ID, MEMBER_ID, ADDRESS, ZIPCODE) VALUES (?,?,?,?) ;";
+	
+	private final String DELETE_ADDR= "DELETE FROM destination WHERE member_id=? AND dest_id= ? ; ";
 	
 	private final String GET_ADDRLIST= "SELECT d.member_id, dest_id, member_tel, address, zipcode "
 			+ "FROM destination AS d JOIN member AS m "
@@ -40,12 +41,38 @@ public class DestinationDAO {
 	private ResultSet rs= null;
 	
 	// CRUD (JDBCUtil)
-	public void insertDest() {
-		
+	public void insertDest(DestinationVO vo) {
+		System.out.println("==> JDBC로 insertDest() 수행");
+		try {
+			conn= JDBCUtil.getConnection();
+			pstmt= conn.prepareStatement(INSERT_ADDR);
+			pstmt.setString(1, vo.getDest_id());
+			pstmt.setString(2, vo.getMember_id());
+			pstmt.setString(3, vo.getAddress());
+			pstmt.setString(4, vo.getZipcode());
+			System.out.println(pstmt.toString());
+			pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			JDBCUtil.close(rs, pstmt, conn);
+		}
 	}
 	
-	public void deleteDest() {
-		
+	public void deleteDest(DestinationVO vo) {
+		System.out.println("==> JDBC로 deleteDest() 수행");
+		try {
+			conn= JDBCUtil.getConnection();
+			pstmt= conn.prepareStatement(DELETE_ADDR);
+			pstmt.setString(1, vo.getMember_id());
+			pstmt.setString(2, vo.getDest_id());
+			System.out.println(pstmt.toString());
+			pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			JDBCUtil.close(rs, pstmt, conn);
+		}
 	}
 	
 	public void updateDest(DestinationVO vo) {
@@ -71,12 +98,14 @@ public class DestinationDAO {
 	}
 	
 	public DestinationVO getDest(DestinationVO vo) {
+		System.out.println("==> JDBC로 getDest() 수행");
 		DestinationVO dest= null;
 		try {
 			conn= JDBCUtil.getConnection();
 			pstmt= conn.prepareStatement(GET_ADDR);
 			pstmt.setString(1, vo.getMember_id());
 			pstmt.setString(2, vo.getDest_id());
+			System.out.println(pstmt.toString());
 			rs= pstmt.executeQuery();
 			if(rs.next()) {
 				dest= new DestinationVO();

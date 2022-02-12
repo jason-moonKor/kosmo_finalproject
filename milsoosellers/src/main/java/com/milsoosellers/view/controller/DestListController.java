@@ -35,6 +35,17 @@ public class DestListController {
 		return "myaddr.do";
 	}
 	
+	@RequestMapping(value="/insertaddr.do", method= RequestMethod.GET)
+	public String insertDest(DestinationVO vo, DestinationDAO dao) {
+		System.out.println("insertaddr.do 실행");
+		dao.insertDest(vo);
+		return "myaddr.do";
+	}
 	
-	
+	@RequestMapping(value="/deleteaddr.do")
+	public String deleteDest(DestinationVO vo, DestinationDAO dao) {
+		System.out.println("deleteaddr.do 실행");
+		dao.deleteDest(vo);
+		return "myaddr.do";
+	}
 }

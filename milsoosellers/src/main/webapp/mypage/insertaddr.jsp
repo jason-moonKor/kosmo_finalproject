@@ -40,7 +40,20 @@
 			.b {
 				border: solid 1px red;
 			}
-		</style>
+			
+			.addr ul {
+				list-style: none;
+			}
+			
+			.addr .col1 {
+				display: inline-block;
+				background-color: #e9ecef;
+			}
+			
+			.addr .col2 {
+				display: inline-block;
+			}
+</style>
 	</head>
 	<body id="page-top">
 	<!-- Navigation-->
@@ -113,42 +126,41 @@
 
 
 				<div class="col-md-10 p-5">
-					<h3 class="text-center">배송주소록</h3>
+					<h3 class="text-center">배송지 정보</h3>
 					<br>
 					<br>
-
-					<table class="table table-hover my-5">
-						<thead>
-							<tr class="text-center bg-warning">
-								<th class="col-md-1">배송지명</th>
-								<th class="col-md-7">주소</th>
-								<th class="col-md-2">연락처</th>
-								<th class="col-md-2">관리</th>
-							</tr>
-						</thead>
-						<tbody>
-							<c:forEach items="${destList}" var="dest">
-							<form action="getaddr.do?member_id=${dest.member_id}&dest_id=${dest.dest_id}" method="get">
-								<tr>
-									<input name="member_id" type="hidden" value="${dest.member_id }">
-									<input name="dest_id" type="hidden" value="${dest.dest_id }">
-									<input name="member_tel" type="hidden" value="${dest.member_tel }">
-									<input name="address" type="hidden" value="${dest.address }">
-									<input name="zipcode" type="hidden" value="${dest.zipcode }">
-									
-									<th class="text-center">${dest.dest_id }</th>
-									<td class="text-start">${dest.address }</td>
-									<td class="text-center">${dest.member_tel }</td>
-									<td class="text-center">
-										<input type="submit" class="btn btn-outline-warning btn-sm" value="수정">
-										<a href="deleteaddr.do?member_id=${dest.member_id}&dest_id=${dest.dest_id}"><button type="button" class="btn btn-outline-warning btn-sm">삭제</button></a>
-									</td>
-								</tr>
-							</form>
-							</c:forEach>
-						</tbody>
-					</table>
-					<a href="mypage/insertaddr.jsp"><button type="button" class="btn btn-warning">등록</button></a>
+					<form action="/milsoosellers/insertaddr.do" method="get">
+						<div class="addr">
+							<ul>
+								<li class="m-3">
+									<ul>
+										<li class="col1 col-md-2">배송지명</li>
+										<li class="col2 col-md-8"><input name="dest_id" type="text"/></li>
+									</ul>
+								</li>
+								<li class="m-3">
+									<ul>
+										<li class="col1 col-md-2">회원아이디</li>
+										<li class="col2 col-md-8"><input name="member_id" type="text"/></li>
+									</ul>
+								</li>
+								<li class="m-3">
+									<ul>
+										<li class="col1 col-md-2">주소</li>
+										<li class="col2 col-md-8"><input name="address" type="text"/></li>
+									</ul>
+								</li>
+								<li class="m-3">
+									<ul>
+										<li class="col1 col-md-2">우편번호</li>
+										<li class="col2 col-md-8"><input name="zipcode" type="text"/></li>
+									</ul>
+								</li>
+							</ul>
+	
+						</div>
+						<input type="submit" class="btn btn-warning" value="등록"/>
+					</form>
 				</div>
 
 			</div>
