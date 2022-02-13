@@ -94,14 +94,14 @@
 							<li>나의 정보</li>
 							<hr>
 							<li>
-								<a href="./myinfo.jsp" class="nav-link link-dark">
+								<a href="myinfo.do" class="nav-link link-dark">
 									<svg class="bi me-2" width="16" height="16">
 										<use xlink:href="#people-circle"></use>
 									</svg> 회원정보 수정
 								</a>
 							</li>
 							<li>
-								<a href="./withdraw.jsp" class="nav-link link-dark">
+								<a href="./mypage/withdraw.jsp" class="nav-link link-dark">
 									<svg class="bi me-2" width="16" height="16">
 										<use xlink:href="#people-circle"></use>
 									</svg> 회원 탈퇴

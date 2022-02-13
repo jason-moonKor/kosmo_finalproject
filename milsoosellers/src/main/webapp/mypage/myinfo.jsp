@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="com.milsoosellers.biz.mypage.MemberVO" %>
+<%@ page import="com.milsoosellers.biz.mypage.impl.MemberDAO" %>
+<%@ page import="java.util.List" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -97,14 +103,14 @@
 							<li>나의 정보</li>
 							<hr>
 							<li>
-								<a href="./myinfo.jsp" class="nav-link link-dark">
+								<a href="myinfo.do" class="nav-link link-dark">
 									<svg class="bi me-2" width="16" height="16">
 										<use xlink:href="#people-circle"></use>
 									</svg> 회원정보 수정
 								</a>
 							</li>
 							<li>
-								<a href="./withdraw.jsp" class="nav-link link-dark">
+								<a href="./mypage/withdraw.jsp" class="nav-link link-dark">
 									<svg class="bi me-2" width="16" height="16">
 										<use xlink:href="#people-circle"></use>
 									</svg> 회원 탈퇴
@@ -120,50 +126,45 @@
 					<h3 class="text-center">회원정보 수정</h3>
 					<br>
 					<br>
-
+					<form action="updateMember.do">
 					<div class="info">
+						<input type="hidden" name="member_id" value="${member.member_id }">
 						<ul>
 							<li class="m-3">
 								<ul>
-									<li class="col1 col-md-2">아이디</li>
-									<li class="col2 col-md-8"><input type="text"></li>
-								</ul>
-							</li>
-							<li class="m-3">
-								<ul>
-									<li class="col1 col-md-2">기존비밀번호</li>
-									<li class="col2 col-md-8"><input type="text"></li>
-								</ul>
-							</li>
-							<li class="m-3">
-								<ul>
 									<li class="col1 col-md-2">신규비밀번호</li>
-									<li class="col2 col-md-8"><input type="text"></li>
+									<li class="col2 col-md-8"><input name="member_passwd" type="text" value="${member.member_passwd }"></li>
 								</ul>
 							</li>
 							<li class="m-3">
 								<ul>
 									<li class="col1 col-md-2">이름</li>
-									<li class="col2 col-md-8"><input type="text"></li>
-								</ul>
-							</li>
-							<li class="m-3">
-								<ul>
-									<li class="col1 col-md-2">이메일</li>
-									<li class="col2 col-md-8"></li>
+									<li class="col2 col-md-8"><input name="member_name" type="text" value="${member.member_name }"></li>
 								</ul>
 							</li>
 							<li class="m-3">
 								<ul>
 									<li class="col1 col-md-2">전화번호</li>
-									<li class="col2 col-md-8"></li>
+									<li class="col2 col-md-8"><input name="member_tel" type="text" value="${member.member_tel }"></li>
+								</ul>
+							</li>
+							<li class="m-3">
+								<ul>
+									<li class="col1 col-md-2">이메일</li>
+									<li class="col2 col-md-8"><input name="member_email" type="text" value="${member.member_email }"></li>
+								</ul>
+							</li>
+							<li class="m-3">
+								<ul>
+									<li class="col1 col-md-2">기본배송지</li>
+									<li class="col2 col-md-8"><input name="member_addr" type="text" value="${member.member_addr }"></li>
 								</ul>
 							</li>
 						</ul>
 
-
+						<input type="submit" class="btn btn-outline-warning btn-sm" value="수정">
 					</div>
-
+					</form>
 				</div>
 
 			</div>

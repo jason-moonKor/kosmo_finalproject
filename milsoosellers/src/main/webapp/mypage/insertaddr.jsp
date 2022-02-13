@@ -84,7 +84,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="myaddr.do" class="nav-link link-dark">
+								<a href="myinfo.do" class="nav-link link-dark">
 									<svg class="bi me-2" width="16" height="16">
 										<use xlink:href="#table"></use>
 									</svg> 배송주소록
@@ -113,7 +113,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="./withdraw.jsp" class="nav-link link-dark">
+								<a href="./mypage/withdraw.jsp" class="nav-link link-dark">
 									<svg class="bi me-2" width="16" height="16">
 										<use xlink:href="#people-circle"></use>
 									</svg> 회원 탈퇴

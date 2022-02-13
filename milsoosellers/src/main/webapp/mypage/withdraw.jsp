@@ -35,7 +35,20 @@
 			.b {
 				border: solid 1px red;
 			}
-		</style>
+			
+			.info ul {
+				list-style: none;
+			}
+			
+			.info .col1 {
+				display: inline-block;
+				background-color: #e9ecef;
+			}
+			
+			.info .col2 {
+				display: inline-block;
+			}
+</style>
 	</head>
 	<body id="page-top">
 	<!-- Navigation-->
@@ -88,14 +101,14 @@
 							<li>나의 정보</li>
 							<hr>
 							<li>
-								<a href="./myinfo.jsp" class="nav-link link-dark">
+								<a href="myinfo.do" class="nav-link link-dark">
 									<svg class="bi me-2" width="16" height="16">
 										<use xlink:href="#people-circle"></use>
 									</svg> 회원정보 수정
 								</a>
 							</li>
 							<li>
-								<a href="./withdraw.jsp" class="nav-link link-dark">
+								<a href="./mypage/withdraw.jsp" class="nav-link link-dark">
 									<svg class="bi me-2" width="16" height="16">
 										<use xlink:href="#people-circle"></use>
 									</svg> 회원 탈퇴
@@ -111,6 +124,27 @@
 					<h3 class="text-center">회원탈퇴</h3>
 					<br>
 					<br>
+					<form action="/milsoosellers/deleteMember.do">
+					<div class="info">
+						<ul>
+							<li class="m-3">
+								<ul>
+									<li class="col1 col-md-2">아이디 확인</li>
+									<li class="col2 col-md-8"><input name="member_id" type="text"/></li>
+								</ul>
+							</li>
+							<li class="m-3">
+								<ul>
+									<li class="col1 col-md-2">비밀번호 확인</li>
+									<li class="col2 col-md-8"><input name="member_passwd" type="text"/></li>
+								</ul>
+							</li>
+							
+						</ul>
+
+						<input type="submit" class="btn btn-outline-warning btn-sm" value="탈퇴">
+					</div>
+					</form>
 
 				</div>
 
